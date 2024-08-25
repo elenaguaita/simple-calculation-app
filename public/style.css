@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+* .flr {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+* .flc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  padding: 10vh 10vw;
+  background-color: #141010;
+  color: #ebebf0;
+  font-family: "Pangram";
+}
+body .header {
+  margin-bottom: 50px;
+}
+body .header .app-title {
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+body .header .app-scope {
+  width: 70vw;
+  text-align: center;
+  font-weight: 300;
+}
+body .calculation {
+  margin-bottom: 50px;
+}
+body .calculation .input-box > input {
+  height: 10vh;
+  width: 70vw;
+  padding: 20px;
+  background-color: #ebebf0;
+  color: #141010;
+  font-size: 14px;
+  font-family: "Pangram";
+  border: none;
+  border-radius: 20px;
+}
+body .calculation .input-box > input:first-child {
+  margin-bottom: 10px;
+}
+body .calculation .btn {
+  margin-top: 25px;
+  height: 50px;
+  max-width: 50vw;
+  padding: 0px 30px;
+  border: none;
+  border-radius: 20px;
+  background-color: #017585;
+  color: #ebebf0;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Pangram";
+}
+body .result h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+body .result p {
+  font-size: 50px;
+  color: #017585;
+  font-weight: 600;
+}
+body .result .result-operation {
+  margin-bottom: 30px;
+}/*# sourceMappingURL=style.css.map */
