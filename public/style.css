@@ -27,55 +27,60 @@ body {
   font-family: "Pangram";
 }
 body .header {
+  width: 100%;
   margin-bottom: 5vh;
   padding-top: 5vh;
+  text-align: center;
 }
 body .header .app-title {
+  max-width: 100%;
   margin-bottom: 10px;
   font-size: 25px;
 }
 body .header .app-scope {
-  width: 70vw;
-  text-align: center;
+  width: 70%;
 }
 body .calculation {
-  margin-bottom: 5vh;
+  margin-bottom: 7.5vh;
   width: 65vw;
 }
 body .calculation .input-box > input {
+  width: 100%;
   height: 8vh;
   padding: 20px;
   margin-bottom: 10px;
-  background-color: #ebebf0;
   color: #141010;
   font-size: 12px;
   font-family: "Pangram";
+  background-color: #ebebf0;
   border: none;
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 body .calculation .btn-box {
-  justify-content: space-between;
   margin-top: 10px;
+  justify-content: space-between;
 }
 body .calculation .btn-box .btn {
   height: 50px;
+  width: auto;
   padding: 0px 25px;
-  border: none;
-  border-radius: 20px;
-  background-color: #017585;
   color: #ebebf0;
   font-size: 14px;
   font-weight: 600;
   font-family: "Pangram";
+  background-color: #017585;
+  border: none;
+  border-radius: 20px;
 }
 body .calculation .btn-box .btn:last-child {
   margin-left: 10px;
-  background-color: #D9DAE0;
   color: #141010;
+  background-color: #D9DAE0;
 }
 body .result .result-box {
-  margin-bottom: 15px;
+  opacity: 0;
+  margin-bottom: calc(2.5vh - 14px);
 }
 body .result .result-box p {
   font-size: 20px;
@@ -87,72 +92,67 @@ body .result .result-box h1 {
   color: #017585;
 }
 body .result .operation-box {
-  margin-bottom: 2vh;
+  opacity: 0;
 }
 body .result .operation-box .operation-btn {
   margin-bottom: 10px;
   text-decoration: underline;
 }
-body .result .operation-box .operation {
+body .result .operation-box .operation-text {
   font-size: 20px;
   font-weight: 600;
   color: #141010;
+  opacity: 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   body.flc {
     padding: 10vh 25vw;
     flex-direction: row;
-    align-items: center;
     justify-content: space-between;
   }
   body.flc .header {
-    align-items: flex-start;
     padding-top: 0;
     margin-bottom: 100px;
+    align-items: flex-start;
   }
   body.flc .header .app-title {
     margin-bottom: 2vh;
+    max-width: 100%;
   }
   body.flc .header .app-scope {
+    width: 25vw;
     text-align: left;
-    width: 20vw;
   }
   body.flc .calculation {
-    width: auto;
+    width: 20vw;
     margin: 0;
   }
   body.flc .calculation .input-box input {
-    width: 15vw;
-    margin-bottom: 1vh;
+    height: 8vh;
+    width: 20vw;
+    margin-bottom: 2vh;
   }
   body.flc .calculation .btn-box {
+    width: 100%;
     margin-top: 1vh;
   }
   body.flc .result {
     position: absolute;
-    bottom: calc(50% - 150px);
-    left: 25vw;
-    align-items: start;
+    bottom: 10vh;
+    left: calc(50% - 110px);
   }
   body.flc .result .result-box {
     flex-direction: row;
     align-items: flex-end;
+    margin-bottom: 2vh;
   }
   body.flc .result .result-box h1 {
     position: relative;
     bottom: -9px;
     margin-left: 10px;
   }
-  body.flc .result .operation-box {
-    flex-direction: row;
-    align-items: flex-end;
-    margin: 0;
-  }
   body.flc .result .operation-box .operation-btn {
-    margin-bottom: 0;
-  }
-  body.flc .result .operation-box .operation {
-    margin-left: 10px;
+    margin-bottom: 2, 5vh;
   }
 }/*# sourceMappingURL=style.css.map */
