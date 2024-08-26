@@ -11,4 +11,8 @@ document.getElementById('calculate-btn').addEventListener('click', async () => {
         },
         body: input_data
     })
+
+    const output = await response.json();
+    document.getElementById('result').textContent = output.result;
+    document.getElementById('result-display').style.opacity = 1;
 })

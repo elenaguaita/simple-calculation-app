@@ -13,8 +13,8 @@
     </div>
     <div class="calculation flc">
         <div class="input-box flc">
-            <input type="number" placeholder="Insert the first number.">
-            <input type="number" placeholder="Insert the second number.">
+            <input id="first-num" type="number" placeholder="Insert the first number.">
+            <input id="second-num" type="number" placeholder="Insert the second number.">
         </div>
         <div class="btn-box flr">
             <button id="calculate-btn" class="btn" type="submit">Calculate</button>
@@ -22,10 +22,10 @@
         </div>
         
     </div>
-    <div class="result flc"> <!-- content added with js -->
+    <div class="result flc" id="result-display"> <!-- content added with js -->
         <div class="result-box flc">
             <p>The result is:</p>
-            <h1 id="result">23
+            <h1 id="result">
             <!-- insert here the result -->
             </h1>
         </div>
@@ -36,5 +36,6 @@
             </p>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
