@@ -78,8 +78,10 @@ body .calculation .btn-box .btn:last-child {
   color: #141010;
   background-color: #D9DAE0;
 }
-body .result .result-box {
+body .result {
   opacity: 0;
+}
+body .result .result-box {
   margin-bottom: calc(2.5vh - 14px);
 }
 body .result .result-box p {
@@ -90,9 +92,6 @@ body .result .result-box p {
 body .result .result-box h1 {
   font-size: 60px;
   color: #017585;
-}
-body .result .operation-box {
-  opacity: 0;
 }
 body .result .operation-box .operation-btn {
   margin-bottom: 10px;

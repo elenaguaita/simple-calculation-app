@@ -86,8 +86,8 @@ body {
         }
     }
     .result {
+        opacity: 0; //
         .result-box {
-            opacity: 0; //
             margin-bottom: calc(2.5vh - 14px);  // considering Pangram Font built-in bottom margin
             p {
                 font-size: 20px;
@@ -100,7 +100,6 @@ body {
             }
         }
         .operation-box {
-            opacity: 0; //
             .operation-btn {
                 margin-bottom: 10px;
                 text-decoration: underline;
@@ -153,7 +152,7 @@ body {
         .result {
             position: absolute;
             bottom: 10vh;
-            left: calc(50% - 110px);  // to center it orizontally
+            left: calc(50% - 110px);  // to center it horizontally
             .result-box {
                 flex-direction: row;
                 align-items: flex-end;
