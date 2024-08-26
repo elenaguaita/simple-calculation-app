@@ -40,10 +40,10 @@ body .header .app-scope {
 }
 body .calculation {
   margin-bottom: 5vh;
+  width: 65vw;
 }
 body .calculation .input-box > input {
   height: 8vh;
-  width: 65vw;
   padding: 20px;
   margin-bottom: 10px;
   background-color: #ebebf0;
@@ -55,13 +55,12 @@ body .calculation .input-box > input {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 body .calculation .btn-box {
-  width: 65vw;
   justify-content: space-between;
+  margin-top: 10px;
 }
 body .calculation .btn-box .btn {
   height: 50px;
   padding: 0px 25px;
-  margin-top: 10px;
   border: none;
   border-radius: 20px;
   background-color: #017585;
@@ -98,5 +97,62 @@ body .result .operation-box .operation {
   font-size: 20px;
   font-weight: 600;
   color: #141010;
-  opacity: 0;
+}
+
+@media (min-width: 768px) {
+  body.flc {
+    padding: 10vh 25vw;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  body.flc .header {
+    align-items: flex-start;
+    padding-top: 0;
+    margin-bottom: 100px;
+  }
+  body.flc .header .app-title {
+    margin-bottom: 2vh;
+  }
+  body.flc .header .app-scope {
+    text-align: left;
+    width: 20vw;
+  }
+  body.flc .calculation {
+    width: auto;
+    margin: 0;
+  }
+  body.flc .calculation .input-box input {
+    width: 15vw;
+    margin-bottom: 1vh;
+  }
+  body.flc .calculation .btn-box {
+    margin-top: 1vh;
+  }
+  body.flc .result {
+    position: absolute;
+    bottom: calc(50% - 150px);
+    left: 25vw;
+    align-items: start;
+  }
+  body.flc .result .result-box {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+  body.flc .result .result-box h1 {
+    position: relative;
+    bottom: -9px;
+    margin-left: 10px;
+  }
+  body.flc .result .operation-box {
+    flex-direction: row;
+    align-items: flex-end;
+    margin: 0;
+  }
+  body.flc .result .operation-box .operation-btn {
+    margin-bottom: 0;
+  }
+  body.flc .result .operation-box .operation {
+    margin-left: 10px;
+  }
 }/*# sourceMappingURL=style.css.map */

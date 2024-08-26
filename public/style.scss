@@ -25,7 +25,7 @@ $bg_color: #ebebf0;
     }
 }
 
-// specific style rules
+// specific style rules (MOBILE)
 body {
     width: 100vw;
     height: 100vh;
@@ -50,10 +50,10 @@ body {
     }
     .calculation {
         margin-bottom: 5vh;
+        width: 65vw;
 
         .input-box > input {
             height: 8vh;
-            width: 65vw;
             padding: 20px;
             margin-bottom: 10px;
 
@@ -65,14 +65,13 @@ body {
             border-radius: 20px;
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         }
-        .btn-box {
-            width: 65vw; 
+        .btn-box { 
             justify-content: space-between;
+            margin-top: 10px;
 
             .btn {
                 height: 50px;
                 padding: 0px 25px;
-                margin-top: 10px;
                 border: none;
                 border-radius: 20px;
                 background-color: $main_color;
@@ -115,7 +114,74 @@ body {
                 font-size: 20px;
                 font-weight: 600;
                 color: $text_color;
-                opacity: 0;
+                //opacity: 0;
+            }
+        }
+    }
+}
+
+// specific style rules (DESKTOP)
+@media(min-width: 768px) {
+    body.flc {
+        padding: 10vh 25vw;
+
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        .header {
+            align-items: flex-start;
+            padding-top: 0;
+            margin-bottom: 100px;
+            .app-title {
+                margin-bottom: 2vh;
+            }
+            .app-scope {
+                text-align: left;
+                width: 20vw;
+            }
+        }
+        .calculation {
+            width: auto;
+            margin: 0;
+            .input-box {
+
+                input {
+                    width: 15vw;
+                    margin-bottom: 1vh;
+                }
+            }
+            .btn-box {
+                margin-top: 1vh;
+            }
+        }
+        .result {
+            position: absolute;
+            bottom: calc(50% - 150px);
+            left: 25vw;
+            align-items: start;
+            
+            .result-box {
+                flex-direction: row;
+                align-items: flex-end;
+                
+
+                h1 {
+                    position: relative;
+                    bottom: -9px;
+                    margin-left: 10px;
+                }
+            }
+            .operation-box {
+                flex-direction: row;
+                align-items: flex-end;
+                margin: 0;
+
+                .operation-btn {
+                    margin-bottom: 0;
+                }
+                .operation {
+                    margin-left: 10px;
+                }
             }
         }
     }
