@@ -22,17 +22,12 @@ function isPrime(number) {
 }
 
 function findNextPrime(num1, num2) {
-    let bigger = 0
-    let next_prime = 0
-
-    // find which number is bigger
-    if (num1 > num2) {
-        bigger = num1
-    } else {
-        bigger = num2
-    }
     
-    next_prime = bigger + 1
+    // find which number is bigger
+    let bigger = Math.max(num1, num2)
+    
+    // start from the next integer number (since primes are only integer)
+    let next_prime = Math.floor(bigger) + 1;
 
     // find the next prime number
     while(!isPrime(next_prime)) {
