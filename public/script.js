@@ -1,8 +1,18 @@
 let clicked = false;
 
+function resetOptions() {
+    document.getElementById('error').style.display = "none"; 
+    clicked = false    
+    document.getElementById('operation').style.opacity = 0;
+    document.getElementById("operation-btn").textContent = "Show operation"; 
+}
+
 document.getElementById('calculate-btn').addEventListener('click', async () => {
     const first_num = document.getElementById('first-num').value;
     const second_num = document.getElementById('second-num').value;
+
+    // reset the screen before sending the request
+    resetOptions();
 
     // data validation before sending data to backend
     // reason: "number" type buttons on some browsers (such a Safari) accept values different from numbers and store them as empty strings ""
@@ -24,14 +34,13 @@ document.getElementById('calculate-btn').addEventListener('click', async () => {
         document.getElementById('result-display').style.opacity = 1;
 
         let prime_num = output.result - first_num - second_num
-        let operation_str = `${first_num} + ${second_num} + ${prime_num}`
+        let operation_str = `(${first_num}) + (${second_num}) + (${prime_num})`
         document.getElementById('operation').textContent = operation_str;
     } else {
         document.getElementById('error').style.display = "block";
         document.getElementById('result-display').style.opacity = 0;
     }
 })
-
 
 document.getElementById("operation-btn").addEventListener('click', async () => {
     if (clicked === false) {
