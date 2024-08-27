@@ -84,6 +84,11 @@ body {
                 }
             }
         }
+        .error-text {
+            display: none;
+            font-size: 12px;
+            color: red;
+        }
     }
     .result {
         opacity: 0; //

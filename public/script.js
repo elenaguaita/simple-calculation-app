@@ -1,3 +1,5 @@
+let clicked = false;
+
 document.getElementById('calculate-btn').addEventListener('click', async () => {
     const first_num = document.getElementById('first-num').value;
     const second_num = document.getElementById('second-num').value;
@@ -24,10 +26,12 @@ document.getElementById('calculate-btn').addEventListener('click', async () => {
         let prime_num = output.result - first_num - second_num
         let operation_str = `${first_num} + ${second_num} + ${prime_num}`
         document.getElementById('operation').textContent = operation_str;
-    }    
+    } else {
+        document.getElementById('error').style.display = "block";
+        document.getElementById('result-display').style.opacity = 0;
+    }
 })
 
-let clicked = false;
 
 document.getElementById("operation-btn").addEventListener('click', async () => {
     if (clicked === false) {
