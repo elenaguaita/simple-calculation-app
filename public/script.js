@@ -53,3 +53,10 @@ document.getElementById("operation-btn").addEventListener('click', async () => {
         document.getElementById("operation-btn").textContent = "Show operation";
     }
 })
+
+document.getElementById("reset-btn").addEventListener('click', async () => {
+    resetOptions()
+    document.getElementById('result-display').style.opacity = 0;
+    document.getElementById('first-num').value = "";
+    document.getElementById('second-num').value = "";
+})
