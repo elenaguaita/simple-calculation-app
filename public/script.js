@@ -17,7 +17,7 @@ document.getElementById('calculate-btn').addEventListener('click', async () => {
     // data validation before sending data to backend
     // reason: "number" type buttons on some browsers (such a Safari) accept values different from numbers and store them as empty strings ""
     //          Number constructor turns an empty string into a 0 (valid number). This way, any string input is turned into a 0 and sent to backend for elaboration
-    //          Possible solution: check is button's value is different from "" and then convert them into numbers using Number.
+    //          Possible solution: check if button's value is different from "" and then convert them into numbers using Number.
     if (first_num != "" && second_num != "") {
         const input_data = JSON.stringify({ first_num: Number(first_num), second_num: Number(second_num) });
 
