@@ -20,3 +20,17 @@ document.getElementById('calculate-btn').addEventListener('click', async () => {
     let operation_str = `${first_num} + ${second_num} + ${prime_num}`
     document.getElementById('operation').textContent = operation_str;
 })
+
+let clicked = false;
+
+document.getElementById("operation-btn").addEventListener('click', async () => {
+    if (clicked === false) {
+        clicked = true
+        document.getElementById('operation').style.opacity = 1;
+        document.getElementById("operation-btn").textContent = "Hide operation";
+    } else {
+        clicked = false
+        document.getElementById('operation').style.opacity = 0;
+        document.getElementById("operation-btn").textContent = "Show operation";
+    }
+})
