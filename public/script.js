@@ -1,24 +1,30 @@
 document.getElementById('calculate-btn').addEventListener('click', async () => {
-    const first_num = Number(document.getElementById('first-num').value);
-    const second_num = Number(document.getElementById('second-num').value);
+    const first_num = document.getElementById('first-num').value;
+    const second_num = document.getElementById('second-num').value;
 
-    const input_data = JSON.stringify({ first_num: first_num, second_num: second_num });
+    // data validation before sending data to backend
+    // reason: "number" type buttons on some browsers (such a Safari) accept values different from numbers and store them as empty strings ""
+    //          Number constructor turns an empty string into a 0 (valid number). This way, any string input is turned into a 0 and sent to backend for elaboration
+    //          Possible solution: check is button's value is different from "" and then convert them into numbers using Number.
+    if (first_num != "" && second_num != "") {
+        const input_data = JSON.stringify({ first_num: Number(first_num), second_num: Number(second_num) });
 
-    const response = await fetch('/calculate', {
-        method: "POST",
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: input_data
-    })
+        const response = await fetch('/calculate', {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: input_data
+        })
 
-    const output = await response.json();
-    document.getElementById('result').textContent = output.result;
-    document.getElementById('result-display').style.opacity = 1;
+        const output = await response.json();
+        document.getElementById('result').textContent = output.result;
+        document.getElementById('result-display').style.opacity = 1;
 
-    let prime_num = output.result - first_num - second_num
-    let operation_str = `${first_num} + ${second_num} + ${prime_num}`
-    document.getElementById('operation').textContent = operation_str;
+        let prime_num = output.result - first_num - second_num
+        let operation_str = `${first_num} + ${second_num} + ${prime_num}`
+        document.getElementById('operation').textContent = operation_str;
+    }    
 })
 
 let clicked = false;

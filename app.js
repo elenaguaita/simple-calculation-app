@@ -51,18 +51,11 @@ app.get('/', (req, res) => {
 app.post("/calculate", (req, res) => {
     const { first_num, second_num } = req.body;
     
-    if (typeof first_num === 'number' && typeof second_num === 'number') {  // input validation 
-        
-        // elaboration of the result
-        const result = first_num + second_num + findNextPrime(first_num, second_num)  // next prime number added
+    // elaboration of the result
+    const result = first_num + second_num + findNextPrime(first_num, second_num)  // next prime number added
 
-        // send result in JSON format
-        res.json({ result })
-    } else {
-
-        // send error message (response status 400: Bad Request)
-        res.status(400).json({ error: "Invalid input. Please provide two numbers." });  // to be displayed
-    }
+    // send result in JSON format
+    res.json({ result })
 })
 
 app.listen(port, () => {
